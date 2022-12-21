@@ -1,0 +1,171 @@
+
+
+Q1
+
+def read_file():
+    file = open("poem.txt","r")
+    for line in file:
+        print(line, end="")
+    file.close()
+
+read_file()
+
+Twinkle, twinkle, little star,
+How I wonder what you are.
+Up above the world so high,
+Like a diamond in the sky.
+
+Q2
+
+def line_count():
+    file = open("story.txt","r")
+    count=0
+    for line in file:
+        if line[0] not in 'T':
+            count+= 1
+    file.close()
+    print("No of lines not starting with 'T'=",count)
+
+line_count()
+
+No of lines not starting with 'T'= 2
+
+Q3
+
+def count_words():
+    file = open("notes.txt","r")
+    count = 0
+    data = file.read()
+    words = data.split()
+    for word in words:
+        count += 1
+    print("Total words are",count)
+    file.close()
+
+count_words()
+
+Total words are 9
+
+Q4
+
+def count_words():
+    file = open("notes.txt","r")
+    count = 0
+    data = file.read()
+    words = data.split()
+    for word in words:
+        if word =="the" or word =="The":
+            count += 1
+    print("Occurrence of word the:",count)
+    file.close()
+
+count_words()
+
+Occurrence of word the: 2
+
+Q5
+
+def display_words():
+    file = open("poem.txt","r")
+    data = file.read()
+    words = data.split()
+    for word in words:
+        if len(word) < 4:
+            print(word, end=" ")
+    file.close()
+print("Words in the file with less than four characters:")
+display_words()
+
+Words in the file with less than four characters:
+How I you Up the so a in the 
+
+Q7
+
+def count_words():
+    file = open("article.txt","r")
+    count = 0
+    data = file.read()
+    words = data.split()
+    for word in words:
+        if word[-1] == 'e':
+            count+=1
+    print(count)
+    file.close()
+print("Words in the file ending with character e:")
+count_words()
+
+Words in the file ending with character e:
+3
+
+Q8
+
+def count_letter():
+    file = open("article.txt","r")
+    data = file.read()
+    count = 0
+    for letter in data:
+        if letter.isupper():
+            count+=1
+    print(count)
+    file.close()
+print("Number of upper case characters in file are:")
+count_letter()
+
+Number of upper case characters in file are:
+4
+
+Q9
+
+def hash_display():
+    file = open("matter.txt","r")
+    data = file.read()
+    for letter in data:
+        print(letter, end="#")
+
+    file.close()
+
+hash_display()
+
+I# #a#m# #a# #g#o#o#d# #b#o#y#
+
+Q10
+
+def JTOI():
+    file = open("words.txt","r")
+    data = file.read()
+    for letter in data:
+        if letter == 'J':
+            print("I",end="")
+        else:
+            print(letter,end="")
+
+    file.close()
+print("Contents of text file after replacing J with I:")
+JTOI()
+
+Contents of text file after replacing J with I:
+I am a good boy.
+He Is also good.
+
+Q11
+
+def AMcount():
+    file = open('story.txt','r')
+    data = file.read()
+    counta=0
+    countm=0
+    for letter in data:
+        if letter == 'A' or letter =='a':
+            counta += 1
+        elif letter == 'M' or letter =='m':
+            countm += 1
+
+    file.close()
+    print('A or a:',counta)
+    print('M or m:',countm)
+
+AMcount()
+
+A or a: 7
+M or m: 2
+
