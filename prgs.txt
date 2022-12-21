@@ -1,0 +1,120 @@
+1)
+height=int(input("Enter your height in centimeters:"))
+height_inch=(1/2.54)*height
+height_feet=(1/12)*height_inch
+print("The height in inches is:")
+print(height_inch)
+print("The height in feet is")
+print(height_feet)
+
+2)
+principal=int(input("Enter Principal amount:"))
+rate=float(input("Enter rate of intrest:"))
+time=int(input("Enter time:"))
+intrest=(principal*rate*time)/100
+print("Simple Intrest is:",intrest)
+
+3)
+seconds=int(input("Enter seconds:"))
+seconds = seconds % (24 * 3600)
+hour = seconds//3600
+seconds %= 3600
+minutes = seconds // 60
+seconds %= 60
+print("Hours:",hour)
+print("Minutes:",minutes)
+print("Seconds:",seconds)
+
+4)
+a=int(input("Enter A:"))
+b=int(input("Enter B:"))
+temp=a
+a=b
+b=temp
+print("After swapping:")
+print("A:",a)
+print("B:",b)
+
+5)Swapping without extra variable
+a=int(input("Enter A:"))
+b=int(input("Enter B:"))
+a,b=b,a
+print("After swapping:")
+print("A:",a)
+print("B:",b)
+
+6)
+import math
+radius=float(input("Enter radius of circle:"))
+circumference=2*math.pi*radius
+area=math.pi*radius*radius
+print("Circumference of circle:",circumference)
+print("Area of circle:",area)
+
+7)
+length=int(input('Enter length of rectangle:'))
+width=int(input('Enter width of rectangle:'))
+perimeter=2*(length+width)
+area=length*width
+print("Area of Rectangle:",area)
+print("Perimeter of Rectangle:",perimeter)
+
+8)
+import math
+s1 = float(input('Enter first side: '))
+s2= float(input('Enter second side: '))
+s3= float(input('Enter third side: '))
+s = (s1+s2+s3)/2
+area=math.sqrt((s * (s -s1) * (s - s2) * (s - s3)))
+print('The area of the triangle is:', area)
+
+9)
+a=int(input('Enter first number:'))
+b=int(input('Enter second number:'))
+quotient=a//b
+remainder=a%b
+print("Quotient:",quotient)
+print("Remainder:",remainder)
+
+10)
+import math
+degree = float(input("Enter degree: "))
+radian = degree*(math.pi/180)
+print('Radian',radian)
+
+11)
+a= float(input('Enter the First Base of Trapezoid:'))
+b= float(input('Enter the Second Base of Trapezoid:'))
+height=float(input('Enter the Height of Trapezoid: '))
+area = 0.5*(a+b)*height
+print("Area of Trapezoid is:",area)
+
+12)
+n=int(input('Enter the value of n:'))
+sum=(n*(n+1)/2)
+print("Sum of numbers is:",sum)
+
+13)
+n=int(input("Enter a three digit number:"))
+a = n// 100
+b = n// 10 % 10
+c = n% 10
+print("Sum of digits of number is:",a + b + c)
+
+14)
+import math
+n=int(input("Enter a number:"))
+if n>=0:
+square_root=math.sqrt(n)
+else:
+print("Enter a positive number")
+print('Square root of number is:',square_root)
+
+15)
+
+principal=int(input("Enter Principal amount:"))
+rate=float(input("Enter rate of intrest:"))
+time=int(input("Enter time:"))
+Amount = principal * (pow((1 + rate / 100), time))
+CI = Amount-principal
+print("Compound interest is", CI)

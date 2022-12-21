@@ -1,0 +1,146 @@
+1.Write a Python program that accepts a string from user. 
+Your program should create a new string by shifting one position to left.
+
+text = input('Enter a string: ')
+newtext = text[1:] + text[0]
+print('New string:', newtext)
+
+output:Enter a string: smriti
+	 New string: mritis
+
+
+
+2.Write a program that asks the user to input his name and print its initials. 
+Assuming that the user always types first name, middle name and last name and 
+does not include any unnecessary space
+
+text = input('Enter your name: ')
+#index of first space
+space1 = text.find(' ')
+#index of second space
+space2 = text.find(' ',space1+1)
+newtext = text[0] +'. '  + text[space1+1] +'. ' + text[space2+1] +'.'
+print("it's initials:", newtext)
+
+output:Enter your name: smriti sudha mohanty
+	 it's initials: s. s. m.
+
+
+
+3.A palindrome is a string that reads the same backward as forward. For example, 
+the words dad, madam and radar are all palindromes. Write a programs that determines
+ whether the string is a palindrome.
+
+text = input('Enter a string: ')
+#reverse string
+newtext = text[::-1]
+
+if text == newtext:
+    print('String is palindrome')
+else:
+    print('String is not palindrome')
+
+output:Enter a string: madam
+	 String is palindrome
+
+
+
+4.Write a Python program to change a given string to a new string where the first 
+and last chars have been exchanged
+
+text = input('Enter a string: ')
+newtext = text[-1]+text[1:-1]+text[0]
+print('New string:', newtext)
+
+output:Enter a string: smriti
+	 New string: imrits
+
+
+
+5.Write a Python program to remove the characters which have odd index values of
+ a given string.
+
+def modify(string):  
+  final = ""   
+  for i in range(len(string)):  
+    if i % 2 == 0:  
+      final = final + string[i]  
+  return final
+string=input("Enter string:")
+print("Modified string is:")
+print(modify(string))
+
+output:Enter string:school
+	 Modified string is:
+	 sho
+
+
+
+
+6.Write a Python script that takes input from the user and displays that input back
+ in upper and lower cases
+
+user_input = input("What's your favourite language? ")
+print("My favourite language is ", user_input.upper())
+print("My favourite language is ", user_input.lower())
+
+output:What's your favourite fruit?: mango
+	 My favourite fruit is  MANGO
+	 My favourite fruit is  mango
+
+
+
+
+
+7.Write a Python program that accepts a comma separated sequence of words as input and
+ prints the unique words in sorted form (alphanumerically).
+
+items = input("Input comma separated sequence of words: ")
+words = [word for word in items.split(",")]
+print(",".join(sorted(list(set(words)))))
+
+output:Input comma separated sequence of words: smriti,janhavi
+	 janhavi,smriti
+
+
+
+8.Write a Python program to create the HTML string with tags around the word(s).
+
+def add_tags(tag, word):
+	return "<%s>%s</%s>" % (tag, word, tag)
+print(add_tags('i', 'Python'))
+print(add_tags('b', 'Python Tutorial'))
+
+output:<i>Python</i>
+	 <b>Python Tutorial</b>
+
+
+
+
+
+9.Write a Python program to insert a string in the middle of a string.
+
+def insert_sting_middle(str, word):
+	return str[:2] + word + str[2:]
+
+print(insert_sting_middle('[[]]', 'Python'))
+print(insert_sting_middle('{{}}', 'PHP'))
+print(insert_sting_middle('<<>>', 'HTML'))
+
+output:[[Python]]
+	 {{PHP}}
+	 <<HTML>>
+
+
+
+10.Write a Python program to print a string made of 4 copies of the last two
+ characters of a specified string (length must be at least 2) 
+
+s1=input("enter:")
+def insert_end(str):
+	sub_str = str[-2:]
+	return sub_str * 4
+print(insert_end(s1))
+
+output:enter a string:smriti
+	 titititi
